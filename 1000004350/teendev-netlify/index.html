@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log in — Teen Dev Community</title>
+  <meta name="description" content="Teen Dev Community — Learn. Build. Ship. Together." />
+  <meta name="theme-color" content="#04040b" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- ===== stylesheet ===== -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="aurora" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="bg-sheen"></span>
+    <span class="grid-overlay"></span>
+    <span class="noise"></span>
+  </div>
+  <div class="spotlight" aria-hidden="true"></div>
+
+  <div class="scroll-progress"><span id="scroll-bar"></span></div>
+
+  <div class="flash-stack" id="flash-stack"></div>
+
+  <main class="page">
+    <section class="auth-wrap">
+      <div class="glass card auth-card tilt" data-tilt>
+        <div class="brand-mark" data-parallax="14">
+          <div class="brand-logo">TD</div>
+          <div>
+            <h1 class="brand-name">Teen Dev Community</h1>
+            <p class="brand-tag">Learn. Build. Ship. Together.</p>
+          </div>
+        </div>
+
+        <h2 class="auth-title">Welcome back</h2>
+        <p class="auth-sub">Log in to get back into your dev community.</p>
+
+        <form class="auth-form" id="login-form">
+          <label class="field">
+            <span>Username or Email</span>
+            <input type="text" name="identifier" required autofocus placeholder="dev.ayush" />
+          </label>
+          <label class="field">
+            <span>Password</span>
+            <input type="password" name="password" required placeholder="********" />
+          </label>
+          <button type="submit" class="btn btn-primary btn-block btn-lg">
+            <span>Log in</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+
+        <p class="auth-alt">New here? <a href="register.html">Create an account</a></p>
+      </div>
+
+      <aside class="auth-side" data-parallax="-10">
+        <span class="eyebrow-pill"><span class="pulse"></span> 3 platforms &middot; 1 community</span>
+        <h3>One place for your whole dev circle.</h3>
+        <p class="lead">Log in and your official groups are ready to go.</p>
+        <ul class="side-list">
+          <li><span class="dot dot-wa"></span><span><b>WhatsApp</b> &mdash; daily updates &amp; doubts</span></li>
+          <li><span class="dot dot-ig"></span><span><b>Instagram</b> &mdash; reels &amp; highlights</span></li>
+          <li><span class="dot dot-dc"></span><span><b>Discord</b> &mdash; voice rooms &amp; projects</span></li>
+        </ul>
+        <p class="side-note">Notes, group study and big projects &mdash; all from here.</p>
+      </aside>
+    </section>
+  </main>
+
+  <!-- ===== javascript ===== -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create account — Teen Dev Community</title>
+  <meta name="theme-color" content="#04040b" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- ===== stylesheet ===== -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="aurora" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="bg-sheen"></span>
+    <span class="grid-overlay"></span>
+    <span class="noise"></span>
+  </div>
+  <div class="spotlight" aria-hidden="true"></div>
+
+  <div class="scroll-progress"><span id="scroll-bar"></span></div>
+
+  <div class="flash-stack" id="flash-stack"></div>
+
+  <main class="page">
+    <section class="auth-wrap">
+      <div class="glass card auth-card tilt" data-tilt>
+        <div class="brand-mark" data-parallax="14">
+          <div class="brand-logo">TD</div>
+          <div>
+            <h1 class="brand-name">Teen Dev Community</h1>
+            <p class="brand-tag">Learn. Build. Ship. Together.</p>
+          </div>
+        </div>
+
+        <h2 class="auth-title">Create your account</h2>
+        <p class="auth-sub">Join in &mdash; it takes a minute.</p>
+
+        <form class="auth-form" id="register-form">
+          <label class="field">
+            <span>Username</span>
+            <input type="text" name="username" required minlength="3" placeholder="dev.ayush" />
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="you@example.com" />
+          </label>
+          <div class="field-row">
+            <label class="field">
+              <span>Password</span>
+              <input type="password" name="password" required minlength="8" placeholder="min 8 characters" />
+            </label>
+            <label class="field">
+              <span>Confirm</span>
+              <input type="password" name="confirm" required minlength="8" placeholder="repeat password" />
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-lg">
+            <span>Create account</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+
+        <p class="auth-alt">Already have an account? <a href="index.html">Log in</a></p>
+      </div>
+
+      <aside class="auth-side" data-parallax="-10">
+        <span class="eyebrow-pill"><span class="pulse"></span> free to join</span>
+        <h3>What you get inside</h3>
+        <p class="lead">Beginner or pro &mdash; there is a place for you. All of this is included:</p>
+        <ul class="side-list">
+          <li><span class="dot dot-note"></span><span><b>Notes</b> &mdash; handwritten &amp; curated</span></li>
+          <li><span class="dot dot-study"></span><span><b>Group study</b> &mdash; sessions &amp; doubts</span></li>
+          <li><span class="dot dot-build"></span><span><b>Big projects</b> &mdash; build together</span></li>
+        </ul>
+        <p class="side-note">Plus the WhatsApp, Instagram and Discord groups.</p>
+      </aside>
+    </section>
+  </main>
+
+  <!-- ===== javascript ===== -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile — Teen Dev Community</title>
+  <meta name="theme-color" content="#04040b" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- ===== stylesheet ===== -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-protected="true">
+  <div class="aurora" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="bg-sheen"></span>
+    <span class="grid-overlay"></span>
+    <span class="noise"></span>
+  </div>
+  <div class="spotlight" aria-hidden="true"></div>
+
+  <div class="scroll-progress"><span id="scroll-bar"></span></div>
+
+  <nav class="topbar glass">
+    <a class="logo" href="dashboard.html">
+      <span class="logo-badge">TD</span>
+      <span class="logo-text">Teen Dev Community</span>
+    </a>
+    <div class="topbar-actions">
+      <a class="navlink" href="dashboard.html">Dashboard</a>
+      <a class="navlink" href="profile.html">Profile</a>
+      <a class="btn btn-ghost btn-sm" href="index.html" data-action="logout">Log out</a>
+    </div>
+  </nav>
+
+  <div class="flash-stack" id="flash-stack"></div>
+
+  <main class="page">
+    <section class="profile-stage">
+      <div class="glass card profile-card featured tilt3d" data-tilt3d>
+        <div class="profile-sheen" aria-hidden="true"></div>
+
+        <div class="profile-top" data-layer="40">
+          <div class="profile-avatar" data-layer="60">
+            <span data-user="initial">A</span>
+            <span class="avatar-ring"></span>
+          </div>
+          <div class="profile-id" data-layer="30">
+            <h1 data-user="username">friend</h1>
+            <p class="profile-mail" data-user="email">you@example.com</p>
+            <span class="badge">Community Member</span>
+          </div>
+        </div>
+
+        <p class="profile-bio" data-layer="22" data-user="bio">No bio yet. Add one below to introduce yourself.</p>
+
+        <div class="profile-stats" data-layer="18">
+          <div class="stat"><strong>&infin;</strong><span>Notes</span></div>
+          <div class="stat"><strong>3</strong><span>Platforms</span></div>
+          <div class="stat"><strong data-user="joined">&mdash;</strong><span>Joined</span></div>
+        </div>
+
+        <div class="profile-links" data-layer="26">
+          <a class="chip chip-wa" data-link="whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="chip chip-ig" data-link="instagram" href="#" target="_blank" rel="noopener">Instagram</a>
+          <a class="chip chip-dc" data-link="discord" href="#" target="_blank" rel="noopener">Discord</a>
+        </div>
+      </div>
+
+      <aside class="glass card edit-card tilt" data-tilt>
+        <h2>Edit profile</h2>
+        <p class="muted">Update your short bio (max 280 characters).</p>
+        <form class="auth-form" id="profile-form">
+          <label class="field">
+            <span>Bio</span>
+            <textarea name="bio" rows="4" maxlength="280" placeholder="Full-stack dev in progress. Building in public."></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary btn-block">Save changes</button>
+        </form>
+        <div class="account-meta">
+          <p><span>Username</span><b data-user="username">friend</b></p>
+          <p><span>Email</span><b data-user="email">you@example.com</b></p>
+          <p><span>Member since</span><b data-user="joined">&mdash;</b></p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- ===== javascript ===== -->
+  <script src="script.js"></script>
+</body>
+</html>

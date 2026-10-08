@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Teen Dev Community</title>
+  <meta name="theme-color" content="#03030a" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- ===== stylesheet ===== -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-protected="true">
+  <div class="aurora" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="bg-sheen"></span>
+    <span class="grid-overlay"></span>
+    <span class="noise"></span>
+  </div>
+  <div class="spotlight" aria-hidden="true"></div>
+
+  <div class="scroll-progress"><span id="scroll-bar"></span></div>
+
+  <nav class="topbar glass">
+    <a class="logo" href="dashboard.html">
+      <span class="logo-badge">TD</span>
+      <span class="logo-text">Teen Dev Community</span>
+    </a>
+    <div class="topbar-actions">
+      <a class="navlink" href="dashboard.html">Dashboard</a>
+      <a class="navlink" href="profile.html">Profile</a>
+      <a class="avatar-mini" href="profile.html" data-user="initial" title="Profile">A</a>
+      <a class="btn btn-ghost btn-sm" href="index.html" data-action="logout">Log out</a>
+    </div>
+  </nav>
+
+  <div class="flash-stack" id="flash-stack"></div>
+
+  <main class="page">
+    <header class="hero reveal">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow-pill"><span class="pulse"></span> Community is live</span>
+          <h1 class="hero-title">
+            Hey <span class="grad" data-user="username">friend</span>,<br />
+            let&rsquo;s build something great.
+          </h1>
+          <p class="hero-sub">
+            Your entire dev circle in one place &mdash; WhatsApp, Instagram and Discord.
+            Notes, group study and big projects, all from here.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="#links">
+              <span>Join the groups</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost btn-lg" href="profile.html">View profile</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hs"><b>3</b><span>Platforms</span></div>
+            <div class="hs"><b>1</b><span>Community</span></div>
+            <div class="hs"><b>&infin;</b><span>Resources</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orb">
+            <span class="ring ring-3"></span>
+            <span class="ring ring-1"></span>
+            <span class="ring ring-2"></span>
+            <span class="orb-core"></span>
+            <span class="chip-float chip-a">Notes</span>
+            <span class="chip-float chip-b">Projects</span>
+            <span class="chip-float chip-c">Group study</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>DSA</span><span>Web Dev</span><span>AI / ML</span><span>Open Source</span><span>Projects</span><span>Notes</span><span>Group Study</span>
+          <span>DSA</span><span>Web Dev</span><span>AI / ML</span><span>Open Source</span><span>Projects</span><span>Notes</span><span>Group Study</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="section" id="links">
+      <div class="section-head reveal">
+        <span class="section-label">// 01 &mdash; connect</span>
+        <h2>Join the community</h2>
+        <p>Official links. Click and hop straight in.</p>
+      </div>
+
+      <div class="link-grid">
+        <a class="glass card link-card tilt reveal" data-tilt data-link="whatsapp" href="#" target="_blank" rel="noopener">
+          <span class="link-glow glow-wa"></span>
+          <span class="link-icon icon-wa">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.16c-.24.68-1.42 1.31-1.95 1.36-.5.05-1.14.24-3.72-.78-3.1-1.22-5.08-4.38-5.23-4.59-.15-.2-1.24-1.65-1.24-3.15s.79-2.24 1.07-2.54c.28-.3.61-.38.81-.38.2 0 .41 0 .58.01.19.01.44-.07.69.53.24.6.83 2.07.9 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.36 1.45.3.15.47.13.65-.08.17-.2.75-.87.95-1.17.2-.3.4-.25.68-.15.28.1 1.75.83 2.05.98.3.15.5.22.58.35.07.13.07.75-.17 1.43Z"/></svg>
+          </span>
+          <span class="link-body">
+            <strong>WhatsApp Group</strong>
+            <small>Daily updates &amp; doubts</small>
+          </span>
+          <span class="link-arrow">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </span>
+        </a>
+
+        <a class="glass card link-card tilt reveal" data-tilt data-link="instagram" href="#" target="_blank" rel="noopener">
+          <span class="link-glow glow-ig"></span>
+          <span class="link-icon icon-ig">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <span class="link-body">
+            <strong>Instagram</strong>
+            <small>Reels, tips &amp; highlights</small>
+          </span>
+          <span class="link-arrow">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </span>
+        </a>
+
+        <a class="glass card link-card tilt reveal" data-tilt data-link="discord" href="#" target="_blank" rel="noopener">
+          <span class="link-glow glow-dc"></span>
+          <span class="link-icon icon-dc">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M19.3 5.4A16.5 16.5 0 0 0 15.2 4l-.2.4a12.6 12.6 0 0 1 3.6 1.7 15.4 15.4 0 0 0-13.2 0A12.6 12.6 0 0 1 9 4.4L8.8 4A16.5 16.5 0 0 0 4.7 5.4C2.2 9.2 1.5 12.9 1.9 16.6a16.7 16.7 0 0 0 5 2.5l.6-1a11 11 0 0 1-1.7-.8l.4-.3a11.9 11.9 0 0 0 10.2 0l.4.3a11 11 0 0 1-1.7.8l.6 1a16.7 16.7 0 0 0 5-2.5c.5-4.3-.6-7.9-3.4-11.2ZM8.7 14.5c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg>
+          </span>
+          <span class="link-body">
+            <strong>Discord Server</strong>
+            <small>Voice rooms &amp; projects</small>
+          </span>
+          <span class="link-arrow">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head reveal">
+        <span class="section-label">// 02 &mdash; what you get</span>
+        <h2>What you get</h2>
+        <p>The real value of the community &mdash; all of it, together.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="glass card feature tilt reveal" data-tilt>
+          <div class="feature-ico">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5V5.5M8 7.5h8M8 11h5"/></svg>
+          </div>
+          <h3>Notes</h3>
+          <p>Handwritten and curated notes &mdash; from DSA to web dev, organised and ready whenever you need them.</p>
+        </article>
+
+        <article class="glass card feature tilt reveal" data-tilt>
+          <div class="feature-ico">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4 3 3 0 0 0-1 5.8V15a3 3 0 0 0 3 3h.5V21h3v-3h.5a3 3 0 0 0 3-3v-2.2A3 3 0 0 0 16 7a4 4 0 0 0-4-4Z"/><path d="M12 8v5"/></svg>
+          </div>
+          <h3>Group Study</h3>
+          <p>Study together &mdash; clear your doubts, stay accountable and keep the streak alive.</p>
+        </article>
+
+        <article class="glass card feature tilt reveal" data-tilt>
+          <div class="feature-ico">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3 0 5.5 2.4 5.5 5.4 0 2-1 3.2-1.8 4.2-.6.8-1 1.4-1.1 2.4H9.4c-.1-1-.5-1.6-1.1-2.4C7.5 11.1 6.5 9.9 6.5 7.9 6.5 4.9 9 2.5 12 2.5Z"/><path d="M9.5 17.5h5M10.5 20.5h3M12 14.5v3"/></svg>
+          </div>
+          <h3>Big Projects Together</h3>
+          <p>Build real products as a team &mdash; ship on GitHub and grow your portfolio.</p>
+        </article>
+
+        <article class="glass card feature tilt reveal" data-tilt>
+          <div class="feature-ico">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 5.6M18.5 20a5.6 5.6 0 0 0-3-5"/></svg>
+          </div>
+          <h3>Dev Network</h3>
+          <p>Juniors, seniors and mentors &mdash; all in one place, learn from everyone.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section cta-band glass reveal">
+      <div>
+        <h2>Set up your profile</h2>
+        <p>A glassmorphism profile card with a layered depth effect &mdash; hover to feel it.</p>
+      </div>
+      <a class="btn btn-primary btn-lg" href="profile.html">
+        <span>Open profile</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </section>
+  </main>
+
+  <!-- ===== javascript ===== -->
+  <script src="script.js"></script>
+</body>
+</html>
